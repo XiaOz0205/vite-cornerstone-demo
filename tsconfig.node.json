@@ -1,0 +1,49 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+    "target": "ES2022",
+    "lib": ["ES2023"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "erasableSyntaxOnly": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+    "paths": {
+      "@/*": ["src/*"],
+      "#/*": ["types/*"],
+      "@/views": ["src/views/*"],
+      "@/utils": ["src/utils/*"],
+      "@/filters": ["src/filters/*"],
+      "@/utils/vtkHelperTs": ["src/utils/vtkHelperTs"],
+    },
+  },
+  "include": [
+    "src/**/*.ts", 
+    "src/**/*.d.ts", 
+    "src/**/*.tsx", 
+    "src/**/*.vue",
+    "types/*.d.ts",
+    "src/*.d.ts",
+    "./*.d.ts",
+  ],
+  "exclude": [
+    "node_modules", 
+    "dist", 
+    "**/*.js", 
+    "src/temp", 
+    "src/assets/scripts/*.js",
+  ],
+}
