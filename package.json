@@ -12,6 +12,7 @@
     "@cornerstonejs/core": "^2.19.0",
     "@cornerstonejs/dicom-image-loader": "^2.19.0",
     "@cornerstonejs/tools": "^2.19.0",
+    "@originjs/vite-plugin-commonjs": "^1.0.3",
     "dicom-parser": "^1.8.21",
     "element-plus": "^2.9.10",
     "unplugin-vue-components": "^28.5.0",

@@ -49,19 +49,7 @@ onUpdated(() => {
 
 async function prefetchMetadataInformation(imageIdsToPrefetch) {
   for (let i = 0; i < imageIdsToPrefetch.length; i++) {
-    const r = cornerstoneDICOMImageLoader.wadouri.loadImage(imageIdsToPrefetch[i])
-    setInterval(() => {
-      console.log(r.promise)
-        r.promise.then(() => {
-          console.log('Image loaded successfully');
-        })
-        .catch((error) => {
-          console.error('Error loading image:', error);
-        }).finally(() => {
-    console.log('Promise finally block executed');
-  });
-      }, 2000);
-    await r.promise;
+    await cornerstoneDICOMImageLoader.wadouri.loadImage(imageIdsToPrefetch[i]).promise
   }
 }
 
